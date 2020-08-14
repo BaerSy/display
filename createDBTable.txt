@@ -1,0 +1,11 @@
+﻿drop database if exists NodeApp;
+create database NodeApp CHARACTER SET utf8 COLLATE utf8_general_ci;
+use NodeApp;
+CREATE TABLE IF NOT EXISTS USERS (id int(10) UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT, 
+                                  fullName varchar(255) DEFAULT NULL,
+                                  emailAddress varchar(255) DEFAULT NULL,
+                                  city varchar(255) DEFAULT NULL,
+                                  country varchar(50) DEFAULT NULL
+                                  
+) DEFAULT CHARSET=utf8;
+
