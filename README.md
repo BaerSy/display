@@ -1,5 +1,8 @@
 
-# This is Practice 1 which shows you How to Insert Form Data Into the Table Using Node.js and MySQL. It reference the below post.
+# Practice 1 
+# How to Insert Form Data Into the Table Using Node.js and MySQL.  
+
+It reference the below post.
 
 
 ***
@@ -7,4 +10,4 @@
 
 ***
 
-The detailed tutorial can be found from 
+The detailed tutorial can be found from https://github.com/BaerSy/display/blob/master/Nodejs%20MySQL%20Tutorial.pdf
