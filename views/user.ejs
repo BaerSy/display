@@ -38,20 +38,20 @@ button[type=submit]:hover {
 </style>
 </head>
 <body>
-<!--====form section start====-->
+<!--====form section start====--><!--====form section start====-->
 <div class="user-detail">
-    <h2>Create User Data</h2>
-    <form action="/user/create" method="POST">
-          <label>Full Name</label>
-          <input type="text" placeholder="Enter Full Name" name="fullName" required>
-          <label>Email Address</label>
-          <input type="email" placeholder="Enter Email Address" name="emailAddress" required>
-          <label>City</label>
-          <input type="city" placeholder="Enter Full City" name="city" required>
-          <label>Country</label>
-          <input type="text" placeholder="Enter Full Country" name="country" required>
-          <button type="submit">Submit</button>
-        </div>
+   
+  <form action="<%=(typeof editData!='undefined')?'/user/edit/'+editData.id:'/user/create'%>" method="POST">
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter Full Name" name="fullName" required value="<%=(typeof editData!='undefined')? editData.fullName:''%>">
+        <label>Email Address</label>
+        <input type="email" placeholder="Enter Email Address" name="emailAddress" required value="<%=(typeof editData!='undefined')? editData.emailAddress:''%>">
+        <label>City</label>
+        <input type="city" placeholder="Enter Full City" name="city" required value="<%=(typeof editData!='undefined')? editData.city:''%>">
+        <label>Country</label>
+        <input type="text" placeholder="Enter Full Country" name="country" required value="<%=(typeof editData!='undefined')? editData.country:''%>">
+        <button type="submit">Submit</button>
+      </div>
 </div>
 <!--====form section start====-->
 </body>
