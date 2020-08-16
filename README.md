@@ -1,243 +1,163 @@
-Develop Simple Web Application
-==============================
+# Develop Simple Web Application
 
-with Node.js and MySQL
-======================
+# with Node.js and MySQL
 
-Backend
-=======
+# Backend
 
-Express, Node.js, MySql
-=======================
+# Express, Node.js, MySql
 
-Frontend
-========
+# Frontend
 
-HTML, Javascript, Angular
-=========================
+# HTML, Javascript, Angular
 
-Develop a Simple Web Application with Node.js and MySql
-=======================================================
+# Develop a Simple Web Application with Node.js and MySql
 
-Purpose: Understand how to develop web application using node.js, mysql, express, html etc.
-===========================================================================================
+# Purpose: Understand how to develop web application using node.js, mysql, express, html etc.
 
-Backend: Express, Node.js, MySql
-================================
+# Backend: Express, Node.js, MySql
 
-Frontend: HTML, Javascript, Angular
-===================================
+# Frontend: HTML, Javascript, Angular
 
-Build a development environment
-===============================
+# Build a development environment
 
-Install Node.js
-===============
+# Install Node.js
 
-<https://nodejs.org/en/download/>
-=================================
+# <https://nodejs.org/en/download/>
 
-![](media/image1.png){width="6.027839020122484in" height="3.0474070428696414in"}
-================================================================================
+# [media/image1.png](media/image1.png)
 
- After install, you can try "npm version"
-========================================
+#      After install, you can try “npm version”
 
- ![](media/image2.png){width="2.433333333333333in" height="3.3333333333333335in"}
-================================================================================
+# [media/image2.png](media/image2.png)
 
-Install MySql
-=============
+# Install MySql
 
-It recommends to install MySql 5.7.x community Edition.
-=======================================================
+# It recommends to install MySql 5.7.x community Edition.
 
-<https://downloads.mysql.com/archives/get/p/25/file/mysql-installer-community-5.7.30.0.msi>
-===========================================================================================
+# <https://downloads.mysql.com/archives/get/p/25/file/mysql-installer-community-5.7.30.0.msi>
 
-When installing it, make sure the password for root is default as "123456". 
-===========================================================================
+# When installing it, make sure the password for root is default as “123456”. 
 
-You can install MySql Workbench to view data from your MySQL
-============================================================
+# You can install MySql Workbench to view data from your MySQL
 
-<https://downloads.mysql.com/archives/get/p/8/file/mysql-workbench-community-6.3.10-winx64.msi>
-===============================================================================================
+# <https://downloads.mysql.com/archives/get/p/8/file/mysql-workbench-community-6.3.10-winx64.msi>
 
-You can use "Command Prompt" cmd to test your installation:
-===========================================================
+# You can use “Command Prompt” cmd to test your installation:
 
-\>mysql --u root --p 
-====================
+# \>mysql –u root –p 
 
- ![](media/image3.png){width="6.341666666666667in" height="2.325in"}
-===================================================================
+# [media/image3.png](media/image3.png)
 
-Enter password "123456", then you will enter the system.
-========================================================
+# Enter password “123456”, then you will enter the system.
 
-mysql\> show database;
-======================
+# mysql\> show database;
 
-![](media/image4.png){width="1.925in" height="2.1083333333333334in"}
-====================================================================
+# [media/image4.png](media/image4.png)
 
-If you want to see inside of which database, just use command "use".
-====================================================================
+# If you want to see inside of which database, just use command “use”.
 
-![](media/image5.png){width="1.5083333333333333in" height="0.35in"}
-===================================================================
+# [media/image5.png](media/image5.png)
 
-How many tables in the database "mysql": 
-========================================
+# How many tables in the database “mysql”: 
 
- ![](media/image6.png){width="2.0573600174978126in" height="4.616666666666666in"}
-================================================================================
+# [media/image6.png](media/image6.png)
 
- What's structure of table "func":
-=================================
+#  What’s structure of table “func”:
 
-![](media/image7.png){width="5.975in" height="1.8083333333333333in"}
-====================================================================
+# [media/image7.png](media/image7.png)
 
-Install Express
-===============
+# Install Express
 
-<https://codingstatus.com/how-to-install-express-application-using-express-generator-tool/>
-===========================================================================================
+# <https://codingstatus.com/how-to-install-express-application-using-express-generator-tool/>
 
- Create a project folder, for example "myapp"
-============================================
+#      Create a project folder, for example “myapp”
 
- Enter this folder
-=================
+#     Enter this folder
 
-> npm install -g express-generator
->
-> npx express \--view=ejs
+>   npm install -g express-generator
 
- ![](media/image8.png){width="3.591666666666667in" height="3.308333333333333in"}
-===============================================================================
+>   npx express --view=ejs
 
-You can test your installation:
-===============================
+# [media/image8.png](media/image8.png)
 
-Run "npm start"
-===============
+# You can test your installation:
 
-Then in the browser <http://localhost:3000>. You will see
-=========================================================
+# Run “npm start”
 
-![](media/image9.png){width="3.6083333333333334in" height="2.1166666666666667in"}
-=================================================================================
+# Then in the browser <http://localhost:3000>. You will see
 
-Practice 1
-==========
+# [media/image9.png](media/image9.png)
 
-How to Insert Form Data Into the Table Using Node.js and MySQL
-==============================================================
+# Practice 1
 
-<https://codingstatus.com/how-to-insert-form-data-into-the-table-using-node-js-and-mysql/>
-==========================================================================================
+# How to Insert Form Data Into the Table Using Node.js and MySQL
 
-Create a database -- "NodeApp" with a table of "Users"
-======================================================
+# <https://codingstatus.com/how-to-insert-form-data-into-the-table-using-node-js-and-mysql/>
 
-Create a txt file -- createDBTable.txt 
-======================================
+# Create a database – “NodeApp” with a table of “Users”
 
- *drop database if exists NodeApp;*
-==================================
+# Create a txt file – createDBTable.txt 
 
- *create database NodeApp CHARACTER SET utf8 COLLATE utf8_general_ci;*
-=====================================================================
+#      *drop database if exists NodeApp;*
 
- *use NodeApp;*
-==============
+# * create database NodeApp CHARACTER SET utf8 COLLATE utf8_general_ci;*
 
- *CREATE TABLE IF NOT EXISTS USERS (id int(10) UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,* 
-============================================================================================
+# * use NodeApp;*
 
- *fullName varchar(255) DEFAULT NULL,*
-=====================================
+# *  CREATE TABLE IF NOT EXISTS USERS (id int(10) UNSIGNED PRIMARY KEY NOT NULL  AUTO_INCREMENT, *
 
- *emailAddress varchar(255) DEFAULT NULL,*
-=========================================
+# *             fullName varchar(255) DEFAULT NULL,*
 
- *city varchar(255) DEFAULT NULL,*
-=================================
+# *             emailAddress varchar(255) DEFAULT NULL,*
 
- *country varchar(50) DEFAULT NULL*
-==================================
+# *             city varchar(255) DEFAULT NULL,*
 
- 
+# *            country varchar(50) DEFAULT NULL*
 
-*) DEFAULT CHARSET=utf8;*
-=========================
+# *) DEFAULT CHARSET=utf8;*
 
- Login to mysql
-==============
+#  Login to mysql
 
- \>\> mysql --u root --p \< createDBTable.txt
-============================================
+#       \>\> mysql –u root –p \< createDBTable.txt
 
- Enter password: 123456
-======================
+#        Enter password: 123456
 
-You can view database and table. This time you should not see any data inside table.
-====================================================================================
+# You can view database and table. This time you should not see any data inside table.
 
- ![](media/image10.png){width="3.941666666666667in" height="2.633252405949256in"}
-================================================================================
+# [media/image10.png](media/image10.png)
 
- 
+# [media/image11.png](media/image11.png)
 
- ![](media/image11.png){width="3.94042760279965in" height="1.575in"}
-===================================================================
+# Create database.js to connect databse. Database.js will be located in the folder of “myapp”.
 
-Create database.js to connect databse. Database.js will be located in the folder of "myapp".
-============================================================================================
+#  *var mysql = require('mysql');*
 
- *var mysql = require(\'mysql\');*
-=================================
+# * var conn = mysql.createConnection({*
 
- *var conn = mysql.createConnection({*
-=====================================
+# *  host: 'localhost', // Replace with your host name*
 
- *host: \'localhost\', // Replace with your host name*
-=====================================================
+# *  user: 'root',      // Replace with your database username*
 
- *user: \'root\', // Replace with your database username*
-========================================================
+# *  password: '123456',      // Replace with your database password*
 
- *password: \'123456\', // Replace with your database password*
-==============================================================
+# *  database: 'nodeapp' // // Replace with your database Name*
 
- *database: \'nodeapp\' // // Replace with your database Name*
-=============================================================
+# *  }); *
 
- *});* 
-=====
+# *  conn.connect(function(err) {*
 
- *conn.connect(function(err) {*
-==============================
+# *  if (err) throw err;*
 
- *if (err) throw err;*
-=====================
+# *     console.log('Database is connected successfully !');*
 
- *console.log(\'Database is connected successfully !\');*
-========================================================
+# *  });*
 
- *});*
-=====
-
- *module.exports = conn;*
-========================
+# *  module.exports = conn;*
 
 ### Create an HTML Form in Node.js App
 
-Now, Use the following HTML code in the views/user.ejs to insert data
-using Node.js & MySQL.
+Now, Use the following HTML code in the views/user.ejs to insert data using
+Node.js & MySQL.
 
 **File Name:** user.ejs
 
@@ -247,74 +167,73 @@ using Node.js & MySQL.
 
 *\<head\>*
 
-*\<meta name=\"viewport\" content=\"width=device-width,
-initial-scale=1\"\>*
+*\<meta name="viewport" content="width=device-width, initial-scale=1"\>*
 
 *\<style\>*
 
 *\* {*
 
-*box-sizing: border-box;}*
+*  box-sizing: border-box;}*
 
 *.user-detail {*
 
-*height: 100vh;*
+*    height: 100vh;*
 
-*border: 2px solid \#f1f1f1;*
+*    border: 2px solid \#f1f1f1;*
 
-*padding: 16px;*
+*    padding: 16px;*
 
-*background-color: white;*
+*    background-color: white;*
 
-*width: 30%;}*
+*    width: 30%;}*
 
 *input{*
 
-*width: 100%;*
+*  width: 100%;*
 
-*padding: 15px;*
+*  padding: 15px;*
 
-*margin: 5px 0 22px 0;*
+*  margin: 5px 0 22px 0;*
 
-*display: inline-block;*
+*  display: inline-block;*
 
-*border: none;*
+*  border: none;*
 
-*background: \#f1f1f1;}*
+*  background: \#f1f1f1;}*
 
-*input\[type=text\]:focus, input\[type=password\]:focus {*
+*input[type=text]:focus, input[type=password]:focus {*
 
-*background-color: \#ddd;*
+*    background-color: \#ddd;*
 
-*outline: none;}*
+*    outline: none;}*
 
-*button\[type=submit\] {*
+*button[type=submit] {*
 
-*background-color: \#434140;*
+*    background-color: \#434140;*
 
-*color: \#ffffff;*
+*    color: \#ffffff;*
 
-*padding: 10px 20px;*
+*    padding: 10px 20px;*
 
-*margin: 8px 0;*
+*    margin: 8px 0;*
 
-*border: none;*
+*    border: none;*
 
-*cursor: pointer;*
+*    cursor: pointer;*
 
-*width: 100%;*
+*    width: 100%;*
 
-*opacity: 0.9;*
+*    opacity: 0.9;*
 
-*font-size: 20px;}*
+*    font-size: 20px;}*
 
 *label{*
 
-*font-size: 18px;;}*
+*  font-size: 18px;;}*
 
-*button\[type=submit\]:hover {*
+*button[type=submit]:hover {*
 
-*background-color:\#3d3c3c;}*
+*  background-color:\#3d3c3c;}*
 
 *\</style\>*
 
@@ -322,41 +241,41 @@ initial-scale=1\"\>*
 
 *\<body\>*
 
-*\<!\--====form section start====\--\>*
+*\<!--====form section start====--\>*
 
-*\<div class=\"user-detail\"\>*
+*\<div class="user-detail"\>*
 
-*\<h2\>Create User Data\</h2\>*
+*    \<h2\>Create User Data\</h2\>*
 
-*\<form action=\"/user/create\" method=\"POST\"\>*
+*    \<form action="/user/create" method="POST"\>*
 
-*\<label\>Full Name\</label\>*
+*          \<label\>Full Name\</label\>*
 
-*\<input type=\"text\" placeholder=\"Enter Full Name\" name=\"fullName\"
+*          \<input type="text" placeholder="Enter Full Name" name="fullName"
 required\>*
 
-*\<label\>Email Address\</label\>*
+*          \<label\>Email Address\</label\>*
 
-*\<input type=\"email\" placeholder=\"Enter Email Address\"
-name=\"emailAddress\" required\>*
+*          \<input type="email" placeholder="Enter Email Address"
+name="emailAddress" required\>*
 
-*\<label\>City\</label\>*
+*          \<label\>City\</label\>*
 
-*\<input type=\"city\" placeholder=\"Enter Full City\" name=\"city\"
+*          \<input type="city" placeholder="Enter Full City" name="city"
 required\>*
 
-*\<label\>Country\</label\>*
+*          \<label\>Country\</label\>*
 
-*\<input type=\"text\" placeholder=\"Enter Full Country\"
-name=\"country\" required\>*
+*          \<input type="text" placeholder="Enter Full Country" name="country"
+required\>*
 
-*\<button type=\"submit\"\>Submit\</button\>*
+*          \<button type="submit"\>Submit\</button\>*
+
+*        \</div\>*
 
 *\</div\>*
 
-*\</div\>*
-
-*\<!\--====form section start====\--\>*
+*\<!--====form section start====--\>*
 
 *\</body\>*
 
@@ -364,78 +283,74 @@ name=\"country\" required\>*
 
 This form page will open through http://localhost:3000/user URL.
 
-Use the following script in the routes/user.js file and lo to load the
-HTML form.
+Use the following script in the routes/user.js file and lo to load the HTML
+form.
 
-router.get(\'/\', **function**(req, res, next) {
+router.get('/', **function**(req, res, next) {
 
-res.render(\'user\');
+res.render('user');
 
 });
 
 You must declare the following points:
 
--   Form method must be POST like method=\"POST\"
+-   Form method must be POST like method="POST"
 
--   Form action contains user/create/ ( It is created
-    > in routes/user.js to post form data ) like action=\"user/create\".
+-   Form action contains user/create/ ( It is created in routes/user.js to post
+    form data ) like action="user/create".
 
 -   You should declare field name the same as the column name of
-    > the users table.
+    the users table.
 
-  ** Form Field**   **Field Name**
-  ----------------- ---------------------
-  Full Name         name="fullName"
-  Email Address     name="emailAddress"
-  City              name="city"
-  Country           name="country"
+| ** Form Field** | **Field Name**      |
+|-----------------|---------------------|
+| Full Name       | name=”fullName”     |
+| Email Address   | name=”emailAddress” |
+| City            | name=”city”         |
+| Country         | name=”country”      |
 
 ### Write MySQL Query in Node.js to Insert Data
 
- 
+First of all, Include the database connection file in the routes/user.js file
 
-First of all, Include the database connection file in
-the routes/user.js file
+**var** db=require('../database');
 
-**var** db=require(\'../database\');
+# **Complete Script: **user.js
 
-**Complete Script: **user.js
-============================
-
-*var express = require(\'express\');*
+*var express = require('express');*
 
 *var router = express.Router();*
 
-*var db=require(\'../database\');*
+*var db=require('../database');*
 
-*router.get(\'/\', function(req, res, next) {*
+*router.get('/', function(req, res, next) { *
 
-*res.render(\'user\');*
-
-*});*
-
-*router.post(\'/create\', function(req, res, next) {*
-
-*// store all the user input data*
-
-*const userDetails=req.body;*
-
-*// insert user data into users table*
-
-*var sql = \'INSERT INTO users SET ?\';*
-
-*db.query(sql, userDetails,function (err, data) {*
-
-*if (err) throw err;*
-
-*console.log(\"User dat is inserted successfully \");*
+*res.render('user'); *
 
 *});*
 
-*res.redirect(\'/user\'); // redirect to user form page after inserting
-the data*
+*router.post('/create', function(req, res, next) {*
 
-*});*
+*  // store all the user input data*
+
+*  const userDetails=req.body;*
+
+*  // insert user data into users table*
+
+*  var sql = 'INSERT INTO users SET ?';*
+
+*  db.query(sql, userDetails,function (err, data) { *
+
+*      if (err) throw err;*
+
+*         console.log("User dat is inserted successfully "); *
+
+*  });*
+
+* res.redirect('/user');  // redirect to user form page after inserting the
+data*
+
+*}); *
 
 *module.exports = router;*
 
@@ -443,107 +358,80 @@ the data*
 
 You have to include user.js route file in  app.js the root file as.
 
-**var** userRouter = require(\'./routes/user\');
+var userRouter = require('./routes/user');
 
-app.use(\'/user\',userRouter);
+app.use('/user',userRouter);
 
-Start nodejs server
-===================
+# Start nodejs server
 
-\>\>npm start
-=============
+# \>\>npm start
 
-![](media/image12.png){width="3.625in" height="0.9333333333333333in"}
-=====================================================================
+# [media/image12.png](media/image12.png)
 
-Apply Web Browser 
-=================
+# Apply Web Browser 
 
-![](media/image13.png){width="4.316666666666666in" height="6.718921697287839in"}
-================================================================================
+# [media/image13.png](media/image13.png)
 
-Practice 2
-==========
+# Practice 2
 
-How to display Data from MySQL database table in Node.js
-========================================================
+# How to display Data from MySQL database table in Node.js
 
-This practice will display all data added into the database in Practice 1.
-==========================================================================
+# This practice will display all data added into the database in Practice 1.
 
-![](media/image14.png){width="6.5in" height="3.3756944444444446in"}
-===================================================================
+# [media/image14.png](media/image14.png)
 
-1.  Create the folder of nodejs_display
-    ===================================
+# Create the folder of nodejs_display
 
-2.  cd nodejs_display
-    =================
+# cd nodejs_display
 
-3.  Install Express as described in Step 3 of "build development environment"
-    =========================================================================
+# Install Express as described in Step 3 of “build development environment”
 
-4.  Create database.js to connect databse. Database.js will be located in the folder of "nodejs_display".
-    =====================================================================================================
+# Create database.js to connect databse. Database.js will be located in the folder of “nodejs_display”.
 
-*var mysql = require(\'mysql\');*
-=================================
+# *var mysql = require('mysql');*
 
- *var conn = mysql.createConnection({*
-=====================================
+# * var conn = mysql.createConnection({*
 
- *host: \'localhost\', // Replace with your host name*
-=====================================================
+# *  host: 'localhost', // Replace with your host name*
 
- *user: \'root\', // Replace with your database username*
-========================================================
+# *  user: 'root',      // Replace with your database username*
 
- *password: \'123456\', // Replace with your database password*
-==============================================================
+# *  password: '123456',      // Replace with your database password*
 
- *database: \'nodeapp\' // // Replace with your database Name*
-=============================================================
+# *  database: 'nodeapp' // // Replace with your database Name*
 
- *});* 
-=====
+# *  }); *
 
- *conn.connect(function(err) {*
-==============================
+# *  conn.connect(function(err) {*
 
- *if (err) throw err;*
-=====================
+# *  if (err) throw err;*
 
- *console.log(\'Database is connected successfully !\');*
-========================================================
+# *     console.log('Database is connected successfully !');*
 
- *});*
-=====
+# *  });*
 
- *module.exports = conn;*
-========================
+# * module.exports = conn;*
 
-Write MySQL Query in Node.js to Fetch Data
-==========================================
+# Write MySQL Query in Node.js to Fetch Data
 
 Before Displaying MySQL data, You have to do the following things
 
--   Include the database connection file database.js in
-    > the routes/user.js file.
+-   Include the database connection file database.js in the routes/user.js file.
 
-**var** db=require(\'../database\');
+**var** db=require('../database');
 
--   Write the following script in the routes/user.js file to fetch data
-    > from the MySQL users table.
+-   Write the following script in the routes/user.js file to fetch data from the
+    MySQL users table.
 
-router.get(\'/user-list\', **function**(req, res, next) {
+router.get('/user-list', **function**(req, res, next) {
 
-var sql=\'SELECT \* FROM users\';
+var sql='SELECT \* FROM users';
 
 db.query(sql, **function** (err, data, fields) {
 
 **if** (err) throw err;
 
-res.render(\'user-list\', { title: \'User List\', userData: data});
+res.render('user-list', { title: 'User List', userData: data});
 
 });
 
@@ -551,61 +439,60 @@ res.render(\'user-list\', { title: \'User List\', userData: data});
 
 -   Include routes/user.js file in the root file app.js
 
-> **var** userRouter = require(\'./routes/user\');
->
-> app.use(\'/user\',userRouter);
+    **var** userRouter = require('./routes/user');
+
+    app.use('/user',userRouter);
 
 **Complete Script:** routes/user.js
 
-**var** express = require(\'express\');
+**var** express = require('express');
 
 **var** router = express.Router();
 
-**var** db=require(\'../database\');
+**var** db=require('../database');
 
 // another routes also appear here
 
-> // this script to fetch data from MySQL databse table
->
-> router.get(\'/user-list\', **function**(req, res, next) {
->
-> **var** sql=\'SELECT \* FROM users\';
->
-> db.query(sql, **function** (err, data, fields) {
->
-> **if** (err) **throw** err;
->
-> res.render(\'user-list\', { title: \'User List\', userData: data});
->
-> });
->
-> });
->
-> **module**.exports = router;
+>   // this script to fetch data from MySQL databse table
 
-6.  Create HTML Table & Display data using Node.js
+>   router.get('/user-list', **function**(req, res, next) {
+
+>   **var** sql='SELECT \* FROM users';
+
+>   db.query(sql, **function** (err, data, fields) {
+
+>   **if** (err) **throw** err;
+
+>   res.render('user-list', { title: 'User List', userData: data});
+
+>   });
+
+>   });
+
+>   **module**.exports = router;
+
+1.  Create HTML Table & Display data using Node.js
 
 Create a file user-list.ejs in the views folder.
 
-Now,  Use the following  HTML code and ejs Script to display data in the
-HTML table.
+Now,  Use the following  HTML code and ejs Script to display data in the HTML
+table.
 
-![](media/image15.png){width="6.5in" height="5.4944444444444445in"}
+![](media/181937499cb2ab6b52428e640284e779.png)
 
 **Complete HTML Table Code: **views/user-list.ejs
 
 \<!DOCTYPE html\>
 
-\<html lang=\"en\"\>
+\<html lang="en"\>
 
 \<head\>
 
 \<title\>Fetch using MySQL and Node.js\</title\>
 
-\<meta charset=\"utf-8\"\>
+\<meta charset="utf-8"\>
 
-\<meta name=\"viewport\" content=\"width=device-width,
-initial-scale=1\"\>
+\<meta name="viewport" content="width=device-width, initial-scale=1"\>
 
 \<style\>
 
@@ -647,11 +534,11 @@ padding: 15px;
 
 \<body\>
 
-\<div class=\"table-data\"\>
+\<div class="table-data"\>
 
 \<h2\>Display Data using Node.js & MySQL\</h2\>
 
-\<table border=\"1\"\>
+\<table border="1"\>
 
 \<tr\>
 
@@ -693,9 +580,9 @@ userData.forEach(function(data){
 
 \<td\>\<%=data.country %\>\</td\>
 
-\<td\>\<a href=\"/user/edit/\<%=data.id%\>\"\>Edit\</a\>\</td\>
+\<td\>\<a href="/user/edit/\<%=data.id%\>"\>Edit\</a\>\</td\>
 
-\<td\>\<a href=\"/user/delete/\<%=data.id%\>\"\>Delete\</a\>\</td\>
+\<td\>\<a href="/user/delete/\<%=data.id%\>"\>Delete\</a\>\</td\>
 
 \</tr\>
 
@@ -705,7 +592,7 @@ userData.forEach(function(data){
 
 \<tr\>
 
-\<td colspan=\"7\"\>No Data Found\</td\>
+\<td colspan="7"\>No Data Found\</td\>
 
 \</tr\>
 
@@ -719,27 +606,27 @@ userData.forEach(function(data){
 
 \</html\>
 
-You can see the above table with displaying data from users table by
-entering the following URL in the browser
+You can see the above table with displaying data from users table by entering
+the following URL in the browser
 
 http://localhost:3000/user/user-list
 
-![](media/image16.png){width="6.5in" height="5.0368055555555555in"}
+![](media/fb0563710093476f1e3ce27c8eec712b.png)
 
 Reference
 
 1.  <https://codingstatus.com/how-to-insert-form-data-into-the-table-using-node-js-and-mysql/>
 
-2.  <https://codingstatus.com/how-to-display-data-from-mysql-database-table-in-node-js/>
+    1.  <https://codingstatus.com/how-to-display-data-from-mysql-database-table-in-node-js/>
 
-3.  <https://github.com/codethereforam/express-mysql-demo>
+    2.  <https://github.com/codethereforam/express-mysql-demo>
 
-4.  <https://codingstatus.com/how-to-insert-data-into-mongodb-using-mongoose-and-node-js/>
+    3.  <https://codingstatus.com/how-to-insert-data-into-mongodb-using-mongoose-and-node-js/>
 
-5.  <https://codingstatus.com/delete-mongodb-data-using-mongoose/>
+    4.  <https://codingstatus.com/delete-mongodb-data-using-mongoose/>
 
-6.  <https://codingstatus.com/update-mongodb-data-using-mongoose/>
+    5.  <https://codingstatus.com/update-mongodb-data-using-mongoose/>
 
-7.  <https://www.youtube.com/watch?v=YYEC7ydDj4k>
+    6.  <https://www.youtube.com/watch?v=YYEC7ydDj4k>
 
-8.  <https://www.simplilearn.com/nodejs-tutorial-article>
+    7.  <https://www.simplilearn.com/nodejs-tutorial-article>
